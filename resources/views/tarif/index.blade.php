@@ -30,19 +30,16 @@
                 <th scope="row">{{ $tarif->id}}</th>
                 <td>{{ $tarif->kodetarif}}</td>
                 <td>{{ $tarif->voltase}}</td>
-                <td>{{ $tarif->biaya}}</td>
-
-
+                <td>Rp. {{ $tarif->biaya}}</td>
                 <td>
-
-                    <a href="{{ route('tarif.read', $tarif->id) }}" class="btn btn-success">Lihat</a>
-                    <a class="btn btn-primary" href="{{ route('tarif.update', $tarif->id) }}">Edit</a>
-                    <a class="btn btn-danger" href="/tarif/hapus/{{ $tarif->id }}">Delete</a>
+                    <a href="{{ route('tarif.read', $tarif->id) }}" class="btn btn-success fa-solid fa-eye"></a>
+                    <a class="btn btn-primary fa-solid fa-pen-to-square"
+                        href="{{ route('tarif.update', $tarif->id) }}"></a>
+                    <a class="btn btn-danger fa-sharp fa-solid fa-trash" href="/tarif/hapus/{{ $tarif->id }}"></a>
                 </td>
             </tr>
             @endforeach
         </table>
-
     </div>
 </main>
 @endsection

@@ -5,10 +5,10 @@
     data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <input class="form-control form-control-light w-100 rounded-0 border-0" type="text" placeholder="Search">
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3 text-bg-primary" href="/admin">
-        <-- Back</a>
+      <a class="nav-link px-3 text-bg-primary fa-solid fa-backward" href="/admin"></a>
     </div>
   </div>
 </header>

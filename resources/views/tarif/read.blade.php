@@ -30,6 +30,17 @@
                         <h4>{{$tarif->voltase}}</h4>
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <h4>Harga/kWh</h4>
+                    </td>
+                    <td>
+                        <h4>:</h4>
+                    </td>
+                    <td>
+                        <h4>Rp. {{$tarif->biaya}}</h4>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>

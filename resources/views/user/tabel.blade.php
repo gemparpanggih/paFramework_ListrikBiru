@@ -34,7 +34,7 @@
                 <td>{{ $user->password}}</td>
                 <td>{{ $user->role}}</td>
                 <td>
-                    <a class="btn btn-danger" href="{{ route('user.hapus', $user->id) }}">Delete</a>
+                    <a class="btn btn-danger fa-sharp fa-solid fa-trash" href="{{ route('user.hapus', $user->id) }}"></a>
                 </td>
             </tr>
             @endforeach

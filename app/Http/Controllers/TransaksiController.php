@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pelanggan;
 use App\Models\Tarif;
 use App\Models\Transaksi;
 use App\Models\User;

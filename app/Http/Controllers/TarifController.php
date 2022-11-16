@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pelanggan;
 use App\Models\Tarif;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -45,7 +44,6 @@ class TarifController extends Controller
 		$tarif = DB::table('tarifs')->where('id',$id)->get();
 		return view('tarif.edit',[
             'tarifs' => $tarif,
-            // 'tarifs' => Tarif::all(),
             'title' => 'Tarif'
         ]);
     }
