@@ -60,7 +60,7 @@
                         <?php
                             $total = round($transaksi->jumlahbeli/$transaksi->tarif->biaya, 2);
                             echo $total;
-                        ?>
+                        ?> kWh
                     </td>
                     <td>{{ $transaksi->token}}</td>
                     <td>{{ $transaksi->user->name}}</td>

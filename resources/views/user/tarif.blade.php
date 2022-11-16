@@ -50,7 +50,7 @@
                     <th scope="row">{{ $tarif->id}}</th>
                     <td>{{ $tarif->kodetarif}}</td>
                     <td>{{ $tarif->voltase}}</td>
-                    <td>{{ $tarif->biaya}}</td>
+                    <td>Rp. {{ $tarif->biaya}}</td>
                 </tr>
                 @endforeach
             </table>
