@@ -44,7 +44,7 @@ class TransaksiController extends Controller
 
     public function read(Transaksi $id){
         return view('transaksi.read', [
-            'transaksix' => $id,
+            'transaksi' => $id,
             'transaksis' => Transaksi::all(),
             'title' => 'Transaksi',
         ]);

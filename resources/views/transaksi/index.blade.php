@@ -34,19 +34,18 @@
             <tr class="mode">
                 <th scope="row">{{ $transaksi->id}}</th>
                 <td>{{ $transaksi->tanggal}}</td>
-                <td>{{ $transaksi->jumlahbeli}}</td>
+                <td>Rp. {{ $transaksi->jumlahbeli}}</td>
                 <td>{{ $transaksi->nometer}}</td>
                 <td>
                     <?php
                         $total = round($transaksi->jumlahbeli/$transaksi->tarif->biaya, 2);
                         echo $total;
-                    ?>
+                    ?> kWh
                 </td>
                 <td>{{ $transaksi->token}}</td>
-                <td>{{ $transaksi->tarif->biaya}}</td>
+                <td>Rp. {{ $transaksi->tarif->biaya}}</td>
                 <td>{{ $transaksi->user->name}}</td>
                 <td>
-
                     <a href="{{ route('transaksi.read', $transaksi->id) }}" class="btn btn-success">Lihat</a>
                     <a class="btn btn-primary" href="{{ route('transaksi.update', $transaksi->id) }}">Edit</a>
                     <a class="btn btn-danger" href="/transaksi/hapus/{{ $transaksi->id }}">Delete</a>

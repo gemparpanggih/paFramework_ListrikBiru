@@ -10,13 +10,35 @@
             <table class="table table-borderless">
                 <tr>
                     <td>
+                        <h4>Nama User</h4>
+                    </td>
+                    <td>
+                        <h4>:</h4>
+                    </td>
+                    <td>
+                        <h4>{{$transaksi->user->name}}</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
                         <h4>Tanggal</h4>
                     </td>
                     <td>
                         <h4>:</h4>
                     </td>
                     <td>
-                        <h4>{{$transaksix->tanggal}}</h4>
+                        <h4>{{$transaksi->tanggal}}</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Jumlah Pembayaran</h4>
+                    </td>
+                    <td>
+                        <h4>:</h4>
+                    </td>
+                    <td>
+                        <h4>Rp. {{$transaksi->jumlahbeli}}</h4>
                     </td>
                 </tr>
                 <tr>
@@ -27,7 +49,23 @@
                         <h4>:</h4>
                     </td>
                     <td>
-                        <h4>{{$transaksix->totalkwh}}</h4>
+                        <h4>
+                        <?php
+                            $total = round($transaksi->jumlahbeli/$transaksi->tarif->biaya, 2);
+                            echo $total;
+                        ?>
+                         kWh</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h4>Token</h4>
+                    </td>
+                    <td>
+                        <h4>:</h4>
+                    </td>
+                    <td>
+                        <h4>{{$transaksi->token}}</h4>
                     </td>
                 </tr>
             </table>
