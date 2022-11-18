@@ -15,7 +15,6 @@
 
     <h2>Data Transaksi</h2>
     <br>
-    <a class="btn btn-success btn-block mb-4" href="/transaksi/create">+ Tambah Data</a>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
             <tr class="mode">
@@ -47,7 +46,6 @@
                 <td>{{ $transaksi->user->name}}</td>
                 <td>
                     <a href="{{ route('transaksi.read', $transaksi->id) }}" class="btn btn-success fa-solid fa-eye"></a>
-                    <a class="btn btn-primary fa-solid fa-pen-to-square" href="{{ route('transaksi.update', $transaksi->id) }}"></a>
                     <a class="btn btn-danger fa-sharp fa-solid fa-trash" href="/transaksi/hapus/{{ $transaksi->id }}"></a>
                 </td>
             </tr>

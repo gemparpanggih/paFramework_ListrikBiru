@@ -24,7 +24,7 @@
     <!-- Text input -->
     <div class="form-outline mb-4">
         <label class="form-label">Voltase</label>
-        <input type="text" required="required" name="voltase" value="{{ $p->voltase }}" class="form-control" />
+        <input type="number" required="required" name="voltase" value="{{ $p->voltase }}" class="form-control" />
     </div>
 
     <div class="form-outline mb-4">

@@ -27,11 +27,6 @@ Route::get('/', [AuthController::class, 'indexView']);
 Route::get('/user', function () {
     return view('user.index', [
         'transaksis' => Transaksi::all(),
-    ]);
-})->middleware('checkRole:pelanggan');
-
-Route::get('/daftarTarif', function () {
-    return view('user.tarif', [
         'tarifs' => Tarif::all(),
     ]);
 })->middleware('checkRole:pelanggan');
@@ -43,23 +38,27 @@ Route::get('/admin', function () {
 
 //Route Login dan Register
 
-Route::get('/login', function () {  return 'Halaman Login'; })->name('login');
+Route::get('/login', function () {
+    return 'Halaman Login';
+})->name('login');
 
 Route::get('/user/{nama}', function ($name) {
     return view('user', ['name' => $name]);
 });
 
-Route::get('/register', function () { 
-    return view('register'); 
+Route::get('/register', function () {
+    return view('register');
 })->name('register');
 
-Route::POST('/action-register', 
+Route::POST(
+    '/action-register',
     [AuthController::class, 'actionRegister']
 );
 
 Route::get('/login', [AuthController::class, 'loginView'])->name("login");
 
-Route::POST('/action-login', 
+Route::POST(
+    '/action-login',
     [AuthController::class, 'actionLogin']
 );
 
@@ -90,3 +89,8 @@ Route::get('/transaksi/hapus/{id}', [TransaksiController::class, 'hapus'])->midd
 Route::get('/transaksi/user', [TransaksiController::class, 'beli'])->name('transaksi.user')->middleware('checkRole:pelanggan');
 Route::post('/transaksi/tambah', [TransaksiController::class, 'tambah'])->name('transaksi.tambah')->middleware('checkRole:pelanggan');
 Route::get('/transaksi/riwayat/{id}', [TransaksiController::class, 'riwayat'])->name('transaksi.riwayat')->middleware('checkRole:pelanggan');
+Route::get('/daftarTarif', function () {
+    return view('user.tarif', [
+        'tarifs' => Tarif::all(),
+    ]);
+})->middleware('checkRole:pelanggan');

@@ -22,8 +22,9 @@ class TarifController extends Controller
     }
 
     public function store(Request $request){
+        $has = 'TR/-';
         DB::table('tarifs')->insert([
-            'kodetarif' => $request->kodetarif,
+            'kodetarif' => $has.$request->kodetarif,
             'voltase' => $request->voltase,
             'biaya' => $request->biaya,
         ]);
